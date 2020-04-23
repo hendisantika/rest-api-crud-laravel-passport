@@ -78,3 +78,29 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # rest-api-crud-laravel-passport
+
+## Screen shot
+
+Register New User
+
+![Register New User](img/register.png "Register New User")
+
+Login User API
+
+![Login User API](img/login.png "Login User API")
+
+Add New Book
+
+![Add New Book](img/add.png "Add New Book")
+
+List All Books
+
+![List All Books](img/list.png "List All Books")
+
+Update a Book
+
+![Update a Book](img/update.png "Update a Book")
+
+Delete a Book
+
+![Delete a Book](img/delete.png "Delete a Book")
