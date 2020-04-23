@@ -1,0 +1,227 @@
+{
+    "info": {
+        "_postman_id": "816c2509-4f7e-4f77-8de5-bd7ea60f24c3",
+        "name": "Laravel REST API CRUD ",
+        "description": "Laravel REST API CRUD ",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Register New User",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"name\": \"Uzumaki Naruto\",\n\t\"email\": \"uzumaki_naruto@konohagakure.co.jp\",\n\t\"password\": \"naruto\",\n\t\"c_password\": \"naruto\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8000/api/register",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "register"
+                    ]
+                },
+                "description": "Register New User"
+            },
+            "response": []
+        },
+        {
+            "name": "Login ",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"email\": \"uzumaki_naruto@konohagakure.co.jp\",\n\t\"password\": \"naruto\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8000/api/login",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                },
+                "description": "Login "
+            },
+            "response": []
+        },
+        {
+            "name": "Add New Book",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzgyMDY0OGUzODQxYWNhYWY2YzgzODk0MzBkZmVkYjRhOGQ1YWI5N2JmZGVkZjMxOWUyMjZhNzgyNzdhNDZiZDhjZTJiYmRiMzU1ZDM2YmQiLCJpYXQiOjE1ODc2MTc0NTMsIm5iZiI6MTU4NzYxNzQ1MywiZXhwIjoxNjE5MTUzNDUzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KjhgkuXKCRHMjFmaHBt_q9X6x3uvJwDLsR7crBdixA21QLfskzqb9hr6Ir1EMe8wEaW9557vMy9tQKH_1_R3fqcn8I8Y3NjKPCM64Mf-z7UMF9afIR1iQKudcKHHDgrbUiYUC3v8rl16Ry2-sCrt8s7qUkInPZvIPgPQHTgB8shiyecXv8PY6N4rPPo_5UjeW969sbx9dl_6C9mJxPZGpdI5pf2NSzFbf4RnQ2qE4c9-CSnrkfI1yJMZUrU8sSSoykL6CZgrXxbacN0iCylz6EF6MOizS_qHCQy4BaXjoDFh6pGCJZFToZPdJNYCt77QMN7oEXg8fEmfzTvYbWRJeukPGzRPJsxSNAGKc3h_7obYNkijU-2UaY0Y54JodM5HSVkCZA5qY6P6o8xwaQhOjMR238U371Gi7XvzLNu4lPAB99iVn08hJT3qYU2vhsMKQaHn28huUf1BUELOQoq7ECf3VwjKfwUvETes_1mUTzZRkMRYewFekV-PYpZz4FIaEnjsNPzdEoP4SdKgmPicvABC5U6vLR6lmm95ehGcd9yXmCXJnJrMeu_PG9ptngOAYCmaiglBFuAd5vqsgSoLW6WzWmFjOahwKMmMmvH1d6djdAvkN-kjpgFZhhtIxelSMmbm7_eNUO6_i7Ae54vON8yZtA9yrVLfD3MCF3ySMEg",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"name\": \"Hendi Santika\",\n\t\"author\": \"Belajar Laravel 7 - Mudah\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8000/api/books",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "books"
+                    ]
+                },
+                "description": "Add New Book"
+            },
+            "response": []
+        },
+        {
+            "name": "Retrieve Book API",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzgyMDY0OGUzODQxYWNhYWY2YzgzODk0MzBkZmVkYjRhOGQ1YWI5N2JmZGVkZjMxOWUyMjZhNzgyNzdhNDZiZDhjZTJiYmRiMzU1ZDM2YmQiLCJpYXQiOjE1ODc2MTc0NTMsIm5iZiI6MTU4NzYxNzQ1MywiZXhwIjoxNjE5MTUzNDUzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KjhgkuXKCRHMjFmaHBt_q9X6x3uvJwDLsR7crBdixA21QLfskzqb9hr6Ir1EMe8wEaW9557vMy9tQKH_1_R3fqcn8I8Y3NjKPCM64Mf-z7UMF9afIR1iQKudcKHHDgrbUiYUC3v8rl16Ry2-sCrt8s7qUkInPZvIPgPQHTgB8shiyecXv8PY6N4rPPo_5UjeW969sbx9dl_6C9mJxPZGpdI5pf2NSzFbf4RnQ2qE4c9-CSnrkfI1yJMZUrU8sSSoykL6CZgrXxbacN0iCylz6EF6MOizS_qHCQy4BaXjoDFh6pGCJZFToZPdJNYCt77QMN7oEXg8fEmfzTvYbWRJeukPGzRPJsxSNAGKc3h_7obYNkijU-2UaY0Y54JodM5HSVkCZA5qY6P6o8xwaQhOjMR238U371Gi7XvzLNu4lPAB99iVn08hJT3qYU2vhsMKQaHn28huUf1BUELOQoq7ECf3VwjKfwUvETes_1mUTzZRkMRYewFekV-PYpZz4FIaEnjsNPzdEoP4SdKgmPicvABC5U6vLR6lmm95ehGcd9yXmCXJnJrMeu_PG9ptngOAYCmaiglBFuAd5vqsgSoLW6WzWmFjOahwKMmMmvH1d6djdAvkN-kjpgFZhhtIxelSMmbm7_eNUO6_i7Ae54vON8yZtA9yrVLfD3MCF3ySMEg",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"name\": \"Hendi Santika\",\n\t\"author\": \"Belajar Spring Boot 1 - Mudah\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8000/api/books",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "books"
+                    ]
+                },
+                "description": "Retrieve Book API"
+            },
+            "response": []
+        },
+        {
+            "name": "Update Book API",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzgyMDY0OGUzODQxYWNhYWY2YzgzODk0MzBkZmVkYjRhOGQ1YWI5N2JmZGVkZjMxOWUyMjZhNzgyNzdhNDZiZDhjZTJiYmRiMzU1ZDM2YmQiLCJpYXQiOjE1ODc2MTc0NTMsIm5iZiI6MTU4NzYxNzQ1MywiZXhwIjoxNjE5MTUzNDUzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KjhgkuXKCRHMjFmaHBt_q9X6x3uvJwDLsR7crBdixA21QLfskzqb9hr6Ir1EMe8wEaW9557vMy9tQKH_1_R3fqcn8I8Y3NjKPCM64Mf-z7UMF9afIR1iQKudcKHHDgrbUiYUC3v8rl16Ry2-sCrt8s7qUkInPZvIPgPQHTgB8shiyecXv8PY6N4rPPo_5UjeW969sbx9dl_6C9mJxPZGpdI5pf2NSzFbf4RnQ2qE4c9-CSnrkfI1yJMZUrU8sSSoykL6CZgrXxbacN0iCylz6EF6MOizS_qHCQy4BaXjoDFh6pGCJZFToZPdJNYCt77QMN7oEXg8fEmfzTvYbWRJeukPGzRPJsxSNAGKc3h_7obYNkijU-2UaY0Y54JodM5HSVkCZA5qY6P6o8xwaQhOjMR238U371Gi7XvzLNu4lPAB99iVn08hJT3qYU2vhsMKQaHn28huUf1BUELOQoq7ECf3VwjKfwUvETes_1mUTzZRkMRYewFekV-PYpZz4FIaEnjsNPzdEoP4SdKgmPicvABC5U6vLR6lmm95ehGcd9yXmCXJnJrMeu_PG9ptngOAYCmaiglBFuAd5vqsgSoLW6WzWmFjOahwKMmMmvH1d6djdAvkN-kjpgFZhhtIxelSMmbm7_eNUO6_i7Ae54vON8yZtA9yrVLfD3MCF3ySMEg",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Hendi Santika - Updated\",\n    \"author\": \"Belajar Spring Boot 3 - Mudah - Updated\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8000/api/books/3",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "books",
+                        "3"
+                    ]
+                },
+                "description": "Update Book API"
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Book API",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzgyMDY0OGUzODQxYWNhYWY2YzgzODk0MzBkZmVkYjRhOGQ1YWI5N2JmZGVkZjMxOWUyMjZhNzgyNzdhNDZiZDhjZTJiYmRiMzU1ZDM2YmQiLCJpYXQiOjE1ODc2MTc0NTMsIm5iZiI6MTU4NzYxNzQ1MywiZXhwIjoxNjE5MTUzNDUzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KjhgkuXKCRHMjFmaHBt_q9X6x3uvJwDLsR7crBdixA21QLfskzqb9hr6Ir1EMe8wEaW9557vMy9tQKH_1_R3fqcn8I8Y3NjKPCM64Mf-z7UMF9afIR1iQKudcKHHDgrbUiYUC3v8rl16Ry2-sCrt8s7qUkInPZvIPgPQHTgB8shiyecXv8PY6N4rPPo_5UjeW969sbx9dl_6C9mJxPZGpdI5pf2NSzFbf4RnQ2qE4c9-CSnrkfI1yJMZUrU8sSSoykL6CZgrXxbacN0iCylz6EF6MOizS_qHCQy4BaXjoDFh6pGCJZFToZPdJNYCt77QMN7oEXg8fEmfzTvYbWRJeukPGzRPJsxSNAGKc3h_7obYNkijU-2UaY0Y54JodM5HSVkCZA5qY6P6o8xwaQhOjMR238U371Gi7XvzLNu4lPAB99iVn08hJT3qYU2vhsMKQaHn28huUf1BUELOQoq7ECf3VwjKfwUvETes_1mUTzZRkMRYewFekV-PYpZz4FIaEnjsNPzdEoP4SdKgmPicvABC5U6vLR6lmm95ehGcd9yXmCXJnJrMeu_PG9ptngOAYCmaiglBFuAd5vqsgSoLW6WzWmFjOahwKMmMmvH1d6djdAvkN-kjpgFZhhtIxelSMmbm7_eNUO6_i7Ae54vON8yZtA9yrVLfD3MCF3ySMEg",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/api/books/3",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "books",
+                        "3"
+                    ]
+                },
+                "description": "Delete Book API"
+            },
+            "response": []
+        }
+    ],
+    "protocolProfileBehavior": {}
+}
