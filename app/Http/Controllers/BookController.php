@@ -44,7 +44,30 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
+            'name' => 'required',
+            'author' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            // return response
+            $response = [
+                'success' => false,
+                'message' => 'Validation Error.', $validator->errors(),
+            ];
+            return response()->json($response, 404);
+        }
+
+        $book = Book::create($input);
+
+        // return response
+        $response = [
+            'success' => true,
+            'message' => 'Book created successfully.',
+        ];
+        return response()->json($response, 200);
     }
 
     /**
