@@ -117,7 +117,32 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        //
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
+            'name' => 'required',
+            'author' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            // return response
+            $response = [
+                'success' => false,
+                'message' => 'Validation Error.', $validator->errors(),
+            ];
+            return response()->json($response, 404);
+        }
+
+        $book->name = $input['name'];
+        $book->author = $input['author'];
+        $book->save();
+
+        // return response
+        $response = [
+            'success' => true,
+            'message' => 'Book updated successfully.',
+        ];
+        return response()->json($response, 200);
     }
 
     /**
