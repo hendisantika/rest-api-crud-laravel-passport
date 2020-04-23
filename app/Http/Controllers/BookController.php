@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Book;
 use Illuminate\Http\Request;
+use Validator;
 
 class BookController extends Controller
 {
@@ -14,7 +15,15 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        $books = Book::all();
+
+        // return response
+        $response = [
+            'success' => true,
+            'message' => 'Books retrieved successfully.',
+            'products' => $books,
+        ];
+        return response()->json($response, 200);
     }
 
     /**
