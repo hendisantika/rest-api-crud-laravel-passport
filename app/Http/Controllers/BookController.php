@@ -76,9 +76,25 @@ class BookController extends Controller
      * @param \App\Book $book
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $book)
+    public function show($id)
     {
-        //
+        $book = Book::find($id);
+
+        if (is_null($book)) {
+            // return response
+            $response = [
+                'success' => false,
+                'message' => 'Book not found.',
+            ];
+            return response()->json($response, 404);
+        }
+
+        // return response
+        $response = [
+            'success' => true,
+            'message' => 'Book retrieved successfully.',
+        ];
+        return response()->json($response, 200);
     }
 
     /**
