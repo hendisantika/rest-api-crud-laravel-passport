@@ -78,6 +78,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # rest-api-crud-laravel-passport
+## Things to do when clone & run Laravel Project:
+1. Run `composer install`
+2. Run `cp .env.example .env` & set your desired db name 
+3. Run `php artisan passport:keys` 
+4. Run `php artisan key:generate` 
+5. Run `php artisan migrate`
+6. Run `php artisan db:seed`
+7. Run `php artisan serve`
 
 ## Screen shot
 
