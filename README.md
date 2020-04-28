@@ -112,3 +112,30 @@ Update a Book
 Delete a Book
 
 ![Delete a Book](img/delete.png "Delete a Book")
+
+
+## Screen shot on Heroku
+
+Register New User
+
+![Register New User](img/register-on-heroku.png "Register New User")
+
+Login User API
+
+![Login User API](img/login-on-heroku.png "Login User API")
+
+Add New Book
+
+![Add New Book](img/add-on-heroku.png "Add New Book")
+
+List All Books
+
+![List All Books](img/list-on-heroku.png "List All Books")
+
+Update a Book
+
+![Update a Book](img/update-on-heroku.png "Update a Book")
+
+Delete a Book
+
+![Delete a Book](img/delete-on-heroku.png "Delete a Book")
