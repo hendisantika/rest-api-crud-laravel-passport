@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "816c2509-4f7e-4f77-8de5-bd7ea60f24c3",
+        "_postman_id": "a7e25ec4-082b-4e67-bb3e-39f0b740bd63",
         "name": "Laravel REST API CRUD ",
         "description": "Laravel REST API CRUD ",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -37,6 +37,37 @@
             "response": []
         },
         {
+            "name": "Register New User on Heroku",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"name\": \"Uchiha Madara\",\n\t\"email\": \"uchiha_madara@konohagakure.co.jp\",\n\t\"password\": \"madara\",\n\t\"c_password\": \"madara\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://rest-api-crud-laravel-passport.herokuapp.com/api/register",
+                    "protocol": "https",
+                    "host": [
+                        "rest-api-crud-laravel-passport",
+                        "herokuapp",
+                        "com"
+                    ],
+                    "path": [
+                        "api",
+                        "register"
+                    ]
+                },
+                "description": "Register New User on Heroku"
+            },
+            "response": []
+        },
+        {
             "name": "Login ",
             "request": {
                 "method": "POST",
@@ -63,6 +94,37 @@
                     ]
                 },
                 "description": "Login "
+            },
+            "response": []
+        },
+        {
+            "name": "Login  on Heroku",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"email\": \"uchiha_madara@konohagakure.co.jp\",\n\t\"password\": \"madara\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://rest-api-crud-laravel-passport.herokuapp.com/api/login",
+                    "protocol": "https",
+                    "host": [
+                        "rest-api-crud-laravel-passport",
+                        "herokuapp",
+                        "com"
+                    ],
+                    "path": [
+                        "api",
+                        "login"
+                    ]
+                },
+                "description": "Login on Heroku"
             },
             "response": []
         },
@@ -103,6 +165,47 @@
                     ]
                 },
                 "description": "Add New Book"
+            },
+            "response": []
+        },
+        {
+            "name": "Add New Book on Heroku",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODExMWU1NTFkNWQ5Y2MyZjg1ZTg0ZDliMDg0NWI0YTg5MDE3YjIxMTM3NTA1OTRjZDliMmNlNDVjYWJkYWIxOWUwZjgyNmU5ZDE3YTIxZGMiLCJpYXQiOjE1ODgwMzI1NjIsIm5iZiI6MTU4ODAzMjU2MiwiZXhwIjoxNjE5NTY4NTYyLCJzdWIiOiIxMSIsInNjb3BlcyI6W119.OeAAKy_Ssc1D2Y5hV4vijZQ_UorQbAhXnaM34EfS_2K9BUA2eu2ahMuyMaIstjj-86Bt3eM-16a4uZHred0lBSalAp1Eo1Sq2ZmgjDcy4ZWCOS7ItPvj8mda_hfzvFtHCby-w2NLiNa034izrJl7ys4bjymqzkdMrLxDeLf8AyyGiUnZ0xS2ZY8Rqr5ZcSpoQsCwSJ-tABxS0FpK3_x1jQ7Ldg5QRmgxliHWiWaorHCxyn6MIcUNv_xONHlSylqBWiQjz82Xft-9HWAzU_KIq6HX6lqQHQfo6nA0WinDt-6aUseKwGm-Je4jo6nrWira66tYCLHQW-T2ltVmQq1fQGmtLbwgxgOb3EZsVy0W4FUHPJdiuv5VoBs_-86OwGqCGclU2EngqYcZ8ImDbDg4sk507lgoaps4UrYnbNDy6xMD9C7snRyDUdD8CKPE01WpLy-j26lruIMov-qQA9HU2dWNF2YjHZK_yFYZnbtfg3iyA94GXzvulzf8IgWFqOE_6s6K7nhpn2e68AXGsvRvxYzbqEQXzIMGo-MGmfjZzn1Oqvv5qh9dG4akGsYcnuaqCQgchnrIldKWMp_iuCAhxUrVHbSJbgCoEtcba9GTRWuYQCYKWom3Jd_ljM0PnsF8cD260MuBnHssW70ONeQ4-tIBC1aI2ExN7l6hKzaL-wk",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"name\": \"Hendi Santika\",\n\t\"author\": \"Belajar Laravel 7 - Mudah\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://rest-api-crud-laravel-passport.herokuapp.com/api/books",
+                    "protocol": "https",
+                    "host": [
+                        "rest-api-crud-laravel-passport",
+                        "herokuapp",
+                        "com"
+                    ],
+                    "path": [
+                        "api",
+                        "books"
+                    ]
+                },
+                "description": "Add New Book on Heroku"
             },
             "response": []
         },
@@ -150,6 +253,50 @@
             "response": []
         },
         {
+            "name": "Retrieve Book API on Heroku",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODExMWU1NTFkNWQ5Y2MyZjg1ZTg0ZDliMDg0NWI0YTg5MDE3YjIxMTM3NTA1OTRjZDliMmNlNDVjYWJkYWIxOWUwZjgyNmU5ZDE3YTIxZGMiLCJpYXQiOjE1ODgwMzI1NjIsIm5iZiI6MTU4ODAzMjU2MiwiZXhwIjoxNjE5NTY4NTYyLCJzdWIiOiIxMSIsInNjb3BlcyI6W119.OeAAKy_Ssc1D2Y5hV4vijZQ_UorQbAhXnaM34EfS_2K9BUA2eu2ahMuyMaIstjj-86Bt3eM-16a4uZHred0lBSalAp1Eo1Sq2ZmgjDcy4ZWCOS7ItPvj8mda_hfzvFtHCby-w2NLiNa034izrJl7ys4bjymqzkdMrLxDeLf8AyyGiUnZ0xS2ZY8Rqr5ZcSpoQsCwSJ-tABxS0FpK3_x1jQ7Ldg5QRmgxliHWiWaorHCxyn6MIcUNv_xONHlSylqBWiQjz82Xft-9HWAzU_KIq6HX6lqQHQfo6nA0WinDt-6aUseKwGm-Je4jo6nrWira66tYCLHQW-T2ltVmQq1fQGmtLbwgxgOb3EZsVy0W4FUHPJdiuv5VoBs_-86OwGqCGclU2EngqYcZ8ImDbDg4sk507lgoaps4UrYnbNDy6xMD9C7snRyDUdD8CKPE01WpLy-j26lruIMov-qQA9HU2dWNF2YjHZK_yFYZnbtfg3iyA94GXzvulzf8IgWFqOE_6s6K7nhpn2e68AXGsvRvxYzbqEQXzIMGo-MGmfjZzn1Oqvv5qh9dG4akGsYcnuaqCQgchnrIldKWMp_iuCAhxUrVHbSJbgCoEtcba9GTRWuYQCYKWom3Jd_ljM0PnsF8cD260MuBnHssW70ONeQ4-tIBC1aI2ExN7l6hKzaL-wk",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"name\": \"Hendi Santika\",\n\t\"author\": \"Belajar Spring Boot 1 - Mudah\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://rest-api-crud-laravel-passport.herokuapp.com/api/books",
+                    "protocol": "https",
+                    "host": [
+                        "rest-api-crud-laravel-passport",
+                        "herokuapp",
+                        "com"
+                    ],
+                    "path": [
+                        "api",
+                        "books"
+                    ]
+                },
+                "description": "Retrieve Book API on Heroku"
+            },
+            "response": []
+        },
+        {
             "name": "Update Book API",
             "request": {
                 "auth": {
@@ -191,6 +338,48 @@
             "response": []
         },
         {
+            "name": "Update Book API on Heroku",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODExMWU1NTFkNWQ5Y2MyZjg1ZTg0ZDliMDg0NWI0YTg5MDE3YjIxMTM3NTA1OTRjZDliMmNlNDVjYWJkYWIxOWUwZjgyNmU5ZDE3YTIxZGMiLCJpYXQiOjE1ODgwMzI1NjIsIm5iZiI6MTU4ODAzMjU2MiwiZXhwIjoxNjE5NTY4NTYyLCJzdWIiOiIxMSIsInNjb3BlcyI6W119.OeAAKy_Ssc1D2Y5hV4vijZQ_UorQbAhXnaM34EfS_2K9BUA2eu2ahMuyMaIstjj-86Bt3eM-16a4uZHred0lBSalAp1Eo1Sq2ZmgjDcy4ZWCOS7ItPvj8mda_hfzvFtHCby-w2NLiNa034izrJl7ys4bjymqzkdMrLxDeLf8AyyGiUnZ0xS2ZY8Rqr5ZcSpoQsCwSJ-tABxS0FpK3_x1jQ7Ldg5QRmgxliHWiWaorHCxyn6MIcUNv_xONHlSylqBWiQjz82Xft-9HWAzU_KIq6HX6lqQHQfo6nA0WinDt-6aUseKwGm-Je4jo6nrWira66tYCLHQW-T2ltVmQq1fQGmtLbwgxgOb3EZsVy0W4FUHPJdiuv5VoBs_-86OwGqCGclU2EngqYcZ8ImDbDg4sk507lgoaps4UrYnbNDy6xMD9C7snRyDUdD8CKPE01WpLy-j26lruIMov-qQA9HU2dWNF2YjHZK_yFYZnbtfg3iyA94GXzvulzf8IgWFqOE_6s6K7nhpn2e68AXGsvRvxYzbqEQXzIMGo-MGmfjZzn1Oqvv5qh9dG4akGsYcnuaqCQgchnrIldKWMp_iuCAhxUrVHbSJbgCoEtcba9GTRWuYQCYKWom3Jd_ljM0PnsF8cD260MuBnHssW70ONeQ4-tIBC1aI2ExN7l6hKzaL-wk",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Hendi Santika - Updated\",\n    \"author\": \"Belajar Spring Boot #3 - Mudah - Updated\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://rest-api-crud-laravel-passport.herokuapp.com/api/books/3",
+                    "protocol": "https",
+                    "host": [
+                        "rest-api-crud-laravel-passport",
+                        "herokuapp",
+                        "com"
+                    ],
+                    "path": [
+                        "api",
+                        "books",
+                        "3"
+                    ]
+                },
+                "description": "Update Book API on Heroku"
+            },
+            "response": []
+        },
+        {
             "name": "Delete Book API",
             "request": {
                 "auth": {
@@ -219,6 +408,39 @@
                     ]
                 },
                 "description": "Delete Book API"
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Book API on Heroku",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODExMWU1NTFkNWQ5Y2MyZjg1ZTg0ZDliMDg0NWI0YTg5MDE3YjIxMTM3NTA1OTRjZDliMmNlNDVjYWJkYWIxOWUwZjgyNmU5ZDE3YTIxZGMiLCJpYXQiOjE1ODgwMzI1NjIsIm5iZiI6MTU4ODAzMjU2MiwiZXhwIjoxNjE5NTY4NTYyLCJzdWIiOiIxMSIsInNjb3BlcyI6W119.OeAAKy_Ssc1D2Y5hV4vijZQ_UorQbAhXnaM34EfS_2K9BUA2eu2ahMuyMaIstjj-86Bt3eM-16a4uZHred0lBSalAp1Eo1Sq2ZmgjDcy4ZWCOS7ItPvj8mda_hfzvFtHCby-w2NLiNa034izrJl7ys4bjymqzkdMrLxDeLf8AyyGiUnZ0xS2ZY8Rqr5ZcSpoQsCwSJ-tABxS0FpK3_x1jQ7Ldg5QRmgxliHWiWaorHCxyn6MIcUNv_xONHlSylqBWiQjz82Xft-9HWAzU_KIq6HX6lqQHQfo6nA0WinDt-6aUseKwGm-Je4jo6nrWira66tYCLHQW-T2ltVmQq1fQGmtLbwgxgOb3EZsVy0W4FUHPJdiuv5VoBs_-86OwGqCGclU2EngqYcZ8ImDbDg4sk507lgoaps4UrYnbNDy6xMD9C7snRyDUdD8CKPE01WpLy-j26lruIMov-qQA9HU2dWNF2YjHZK_yFYZnbtfg3iyA94GXzvulzf8IgWFqOE_6s6K7nhpn2e68AXGsvRvxYzbqEQXzIMGo-MGmfjZzn1Oqvv5qh9dG4akGsYcnuaqCQgchnrIldKWMp_iuCAhxUrVHbSJbgCoEtcba9GTRWuYQCYKWom3Jd_ljM0PnsF8cD260MuBnHssW70ONeQ4-tIBC1aI2ExN7l6hKzaL-wk",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "https://rest-api-crud-laravel-passport.herokuapp.com/api/books/5",
+                    "protocol": "https",
+                    "host": [
+                        "rest-api-crud-laravel-passport",
+                        "herokuapp",
+                        "com"
+                    ],
+                    "path": [
+                        "api",
+                        "books",
+                        "5"
+                    ]
+                },
+                "description": "Delete Book API on Heroku"
             },
             "response": []
         }
